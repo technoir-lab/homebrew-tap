@@ -5,6 +5,11 @@ class Strudel < Formula
   sha256 "3e4ad6c8b49d0cbc5b17c1f60e7a57375408c3b72ab0b643a720d52ceab02ca4"
   license "Apache-2.0"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   head do
     url "https://github.com/octavore/strudel.git", branch: "main"
     depends_on "rust" => :build
